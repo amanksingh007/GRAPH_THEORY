@@ -215,9 +215,9 @@ class Graph{
 		boolean visited[]=new boolean[N];
 		PriorityQueue<Distance> pq=new PriorityQueue<Distance>();
 		pq.offer(new Distance(src,0));
-		for(int i=0;i<N;i++)
-			if(i!=src)
-				pq.offer(new Distance(i,99999999));
+		//for(int i=0;i<N;i++)
+			//if(i!=src)
+				//pq.offer(new Distance(i,99999999));
 		while(!pq.isEmpty()){
 			Distance top=pq.poll();
 			int cur=top.vertex;int dist=top.distance;
