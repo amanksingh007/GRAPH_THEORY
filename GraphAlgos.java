@@ -286,7 +286,7 @@ class GraphAlgos{
 	}
 	
 	static class Reader{
-        final private int BUFFER_SIZE = 1 << 16;
+        final private int BUFFER_SIZE = 1000006;
         private DataInputStream din;
         private byte[] buffer;
         private int bufferPointer, bytesRead;
@@ -304,7 +304,7 @@ class GraphAlgos{
         }
  
         public String readLine() throws IOException{
-            byte[] buf = new byte[1364]; // line length
+            byte[] buf = new byte[100006]; // line length
             int cnt = 0, c;
             while((c=read())!=-1){
                 if(c=='\n')
